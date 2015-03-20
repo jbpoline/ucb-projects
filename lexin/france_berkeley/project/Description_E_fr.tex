@@ -1,0 +1,226 @@
+\documentclass[12pt]{article}
+\usepackage{enumerate,color,multirow}
+\usepackage{latexsym,amsbsy,amstext,amssymb,amsmath,bm}
+\usepackage{graphicx,booktabs}
+\usepackage{algorithmic,algorithm}
+\usepackage{hyperref}
+\usepackage{theorem}
+\usepackage{array,stmaryrd}
+\usepackage[compact]{titlesec}
+\usepackage{natbib}
+\usepackage{varioref}
+\usepackage[margin=0.85in]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{wrapfig}
+\usepackage{setspace}          
+\singlespacing
+
+\newtheorem{example}{\sc Example}
+\newtheorem{lemma}{\sc Lemma}
+\newtheorem{theorem}{\sc Theorem}
+\newtheorem{corollary}{\sc Corollary}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{definition}{\sc Definition}
+\newtheorem{remark}{\sc remark}
+\newtheorem{assumption}{\sc Assumption}
+\newtheorem{condition}{Condition}
+\newtheorem{proposition}{\sc Proposition}
+
+\newcommand{\E}{\mathbf{E}}
+\newcommand{\var}{\mathbf{var}}
+\newcommand{\cov}{\mathrm{cov}}
+\newcommand{\vect}{\mathrm{vec}}
+\newcommand{\tr}{\mathrm{trace}}
+\newcommand{\indep}{\;\, \rule[0em]{.03em}{.6em} \hspace{-.25em}
+\rule[0em]{.65em}{.03em} \hspace{-.25em}
+\rule[0em]{.03em}{.6em}\;\,}
+\newcommand{\real}[1]{\mathrm{I \! R} \mathit{^{#1}}}
+\newcommand{\trans}{^{\mbox{\tiny {\sf T}}}}
+\newcommand{\spn}{\mbox{span}}
+\newcommand{\spc}{{\mathcal S}}
+\newcommand{\diag}{\mathrm{diag}}
+
+\newcommand{\Abf}{{\bm A}}
+\newcommand{\Bbf}{{\bm B}}
+\newcommand{\Cbf}{{\bm C}}
+\newcommand{\Dbf}{{\bm D}}
+\newcommand{\Fbf}{{\bm F}}
+\newcommand{\Gbf}{{\bm G}}
+\newcommand{\Hbf}{{\bm H}}
+\newcommand{\Ibf}{{\bm I}}
+\newcommand{\Jbf}{{\bm J}}
+\newcommand{\Kbf}{{\bm K}}
+\newcommand{\Lbf}{{\bm L}}
+\newcommand{\Mbf}{{\bm M}}
+\newcommand{\Obf}{{\bm O}}
+\newcommand{\Pbf}{{\bm P}}
+\newcommand{\Qbf}{{\bm Q}}
+\newcommand{\Sbf}{{\bm S}}
+\newcommand{\Ubf}{{\bm U}}
+\newcommand{\Vbf}{{\bm V}}
+\newcommand{\Wbf}{{\bm W}}
+\newcommand{\Xbf}{{\bm X}}
+\newcommand{\Ybf}{{\bm Y}}
+\newcommand{\Zbf}{{\bm Z}}
+
+\newcommand{\abf}{{\bm a}}
+\newcommand{\bbf}{{\bm b}}
+\newcommand{\cbf}{{\bm c}}
+\newcommand{\ebf}{{\bm e}}
+\newcommand{\fbf}{{\bm f}}
+\newcommand{\gbf}{{\bm g}}
+\newcommand{\lbf}{{\bm l}}
+\newcommand{\qbf}{{\bm q}}
+\newcommand{\tbf}{{\bm t}}
+\newcommand{\ubf}{{\bm u}}
+\newcommand{\vbf}{{\bm v}}
+\newcommand{\wbf}{{\bm w}}
+\newcommand{\xbf}{{\bm x}}
+\newcommand{\ybf}{{\bm y}}
+\newcommand{\zbf}{{\bm z}}
+
+\newcommand{\zerobf}{{\mathbf 0}}
+\newcommand{\onebf}{{\mathbf 1}}
+
+\newcommand{\greekbold}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\alphabf}{\greekbold{\alpha}}
+\newcommand{\betabf}{\greekbold{\beta}}
+\newcommand{\deltabf}{\greekbold{\delta}}
+\newcommand{\etabf}{\greekbold{\eta}}
+\newcommand{\gammabf}{\greekbold{\gamma}}
+\newcommand{\mubf}{\greekbold{\mu}}
+\newcommand{\nubf}{\greekbold{\nu}}
+\newcommand{\phibf}{\greekbold{\phi}}
+\newcommand{\psibf}{\greekbold{\psi}}
+\newcommand{\taubf}{\greekbold{\tau}}
+\newcommand{\varepsilonbf}{\greekbold{\varepsilon}}
+\newcommand{\zetabf}{\greekbold{\zeta}}
+\newcommand{\thetabf}{\greekbold{\theta}}
+\newcommand{\lambdabf}{\greekbold{\lambda}}
+\newcommand{\Gammabf}{\greekbold{\Gamma}}
+\newcommand{\Thetabf}{\greekbold{\Theta}}
+\newcommand{\Sigmabf}{\greekbold{\Sigma}}
+\newcommand{\Lambdabf}{\greekbold{\Lambda}}
+\newcommand{\Omegabf}{\greekbold{\Omega}}
+\newcommand{\Pibf}{\greekbold{\Pi}}
+
+
+
+\begin{document}
+
+\begin{center}
+{\large \bf DESCRIPTION DU PROJET}
+\end{center}
+
+\noindent
+{\large \textbf{1. Buts et significance du projet.}}
+\medskip
+
+\noindent
+Il a \'et\'e r\'ecemment montr\'e qu'une proportion importante (50\%) du risque g\'en\'etique du syndrome autistique est captur\'e par la variance g\'en\'etique commune de nombreux effets de petites tailles. Ce r\'esultat sugg\`ere que dans la plupart des cas, le ph\'enotype autistique n'est pas le r\'esultat d'un ou de quelque g\`enes, mais le fait de variants communs sur un grand nombre de g\`enes. Nous avons montr\'e r\'ecemment que la variabilit\'e dans la cohorte IMAGEN est aussi captur\'ee par des variant fr\'equents (Toro et coll., 2014). Nous pourrions donc cartographier la corr\'elation g\'en\'etique entre le risque d'avoir un ph\'enotype autistique et le ph\'enotype de neuroimagerie, ce qui permettrait d'aider a identifier les structures c\'er\'ebrales dont les bases g\'en\'etiques correspondent avec celles du risque de d\'evelopper un syndrome autistique. Cette cartographie pourrait aussi permettre d'obtenir des informations biologiques pertinentes pour les maladies psychiatriques dont l'architecture g\'en\'etique est massivement polyg\'enique. Plus sp\'ecifiquement dans ce projet nos avons les buts suivants:
+
+\newcounter{pubcnt}
+\newlength{\adjitsepb}
+\setlength{\adjitsepb}{0.06in}
+
+\vspace{-0.075in}
+\begin{list}{[\arabic{pubcnt}]}{\usecounter{pubcnt}\setlength{\parsep}{0in}\setlength{\itemsep}{\adjitsepb}\setlength{\itemindent}{0in}}
+	\item Nous proposons d'estimer les corr\'elations genetiques entre le risque d'un trouble psychiatrique et le ph\'enotype de neuroimagerie (anatomique) en utilisant des cohortes de grandes tailles (comme IMAGEN). 
+	\item Nous pr\'evoyons de combiner la cohorte ENIGMA avec la cohorte IMAGEN dans notre analyse, ce qui devrait nous donner une taille d'\'echantillon d'environ 20000 sujets et assurer une puissance statistique importante pour d\'etecter des effets de petites tailles. 
+	\item Nous proposons une nouvelle m\'ethode statistique pour l'analyse des ph\'enotypes complexes a travers l'ensemble du g\'enome, en utilisant les m\'ethodes modernes d'apprentissage statistique et de moindre carres \`a noyaux sp\'ecialement conçues pour des donn\'ees g\'enomiques. 
+\end{list}
+
+\noindent
+\textbf{Importance du projet:} Notre m\'ethode fourni une approche syst\'ematique et puissante pour obtenir les informations pertinentes sur le syst\`eme nerveux central, quand le risque de maladie psychiatrique n'est pas du \`a un seul ou un petit nombre de g\`ene, mais est du fait d'un grand nombre de g\`enes distribu\'es sur l'ensemble du g\'enome ayant chacun un effet tr\`es petit. 
+\medskip
+
+\noindent
+{\large \textbf{2. M\'ethodes.}}
+\smallskip
+
+\noindent
+\textbf{2.1. Les consortiums IMAGEN et ENIGMA.}
+\smallskip
+
+\noindent
+Les donn\'ees n\'ecessaires pour ce projet existent deja dans les consortiums IMAGEN (Schumann et al., 2010) et ENIGMA (Thompson et al., 2014). Roberto Toro et JB Poline sont des membres de plein droits de ces consortiums et ont acc\`es aux donn\'ees. Le projet d\'ecrit \`a d\'ej\`a \'et\'e soumis et approuve par les deux consortiums, donnant acc\`es a plus de 20000 sujets et la possibilit\'e d'une tr\`es grande puissance statistique pour la d\'etection de l'h\'eritabilit\'e et des corr\'elations g\'en\'etiques. 
+\smallskip
+
+\noindent
+\textbf{2.2. Analyse des traits complexes sur l'ensemble du g\'enome}
+\smallskip
+
+\noindent
+Le concept a la base de l'analyse de ces traits complexes (cf GCTA) est un mod\`ele a effets mixtes (Yang et al., 2010):
+\begin{eqnarray} \label{eqn:lm}
+y_i = \betabf\trans \xbf_i + g_i + \varepsilon_i, \;\; i = 1, \ldots, n,
+\end{eqnarray}
+ou $y_i$ d\'enote le ph\'enotype du $i$eme sujet, $\xbf_i$ est un vecteur de covariate avec des effets fixes du $i$eme sujet, incluant par exemple les effets de l'age ou du genre, $\betabf$ est le vecteur correspondant d'effets fixes, $g_i$ est l'effet g\'en\'etique total du $i$eme individu, $\varepsilon$ est le terme d'erreur (distribution normale avec moyenne nulle et variance constante $\sigma^2_\varepsilon$), et $n$ est le nombre total de sujets. 
+Soit $\ybf = (y_1, \ldots, y_n)\trans$, and $\gbf = (g_1, \ldots, g_n)\trans$, la relation d'int\'erêt entre les covariances est la suivante $\var(\ybf) = \Abf \sigma^2_g + \Ibf \sigma^2_\varepsilon$,
+ou $\Abf$ est une matrice $n \times n$ repr\'esentant la relation g\'en\'etique entre les individus, $\Ibf$ est une matrice identit\'e $n \times n$, et $\gbf$ suit une loi normal de moyenne nulle et de covariance $\Abf \sigma^2_g$. La quantit\'e  $\sigma^2_g$ capture la  variance expliqu\'ee par tous les SNPs et peut être estim\'ee par maximum de vraisemblance restreinte (REML) \`a partir du mod\`ele \`a effets mixtes.
+\smallskip
+\noindent
+\textbf{2.3. Moindres carres \`a noyau et noyau de Wright-Fisher}
+\smallskip
+\noindent
+A partir de \eqref{eqn:lm}, GCTA fait deux hypoth\`eses. D'une part l'association entre le ph\'enotype $y_i$ et l'effet g\'en\'etique $g_i$ est suppos\'e lin\'eaire. D'autre part, les effets des SNPs sont combin\'es lin\'eairement dans $g_i$. Biologiquement, aucune de ces hypoth\`eses n'est exacte. L'association entre les ph\'enotypes et les variants g\'en\'etiques peut être complexe, vraisemblablement non lin\'eaire. La combinaison des effets de chaque SNP peut elle aussi être complexe et non lin\'eaire, par exemple avec des effets d'\'epistasis (interactions entre SNPs). 
+Pour r\'epondre \`a ces limitations, nous proposons d'employer une m\'ethode d'apprentissage statistique moderne, les moindres carr\'es a noyau, pour remplacer le mod\`ele lin\'eaire \eqref{eqn:lm},
+\begin{eqnarray} \label{eqn:nm}
+y_i = \betabf\trans \xbf_i + h(g_i) + \varepsilon_i, \;\; i = 1, \ldots, n,
+\end{eqnarray}
+ou la diff\'erence cl\'es est qu'une fonction non connue apportant de la flexibilit\'e $h$ est introduite pour capturer l'association entre $y_i$ and $g_i$. En imposant que $h$ soit dans un espace fonctionnel souple, l'espace de Hilbert \`a noyaux reproduisant, on peut obtenir une solution analytique pour $h(g_i)$, et les calculs sont rapides. De plus il existe une connexion directe entre le mod\`ele  \eqref{eqn:nm} et le mod\`ele \`a effet mixte (Liu et al., 2007), et l'on peut donc utiliser REML pour calculer la variance de $h(g_i)$. Nous consid\'erons la moyenne de $h(g_i)$ a travers les sujets comme une mesure de la variance expliqu\'ee par les SNPs, qui joue le même rôle que $\sigma^2_g$ dans le mod\`ele \eqref{eqn:lm}. L'estimation du mod\`ele  \eqref{eqn:nm} requiert aussi la sp\'ecification d'une fonction noyau. Nous proposons d'utiliser le noyau de  Wright-Fisher (Zhu et al., 2011) sp\'ecifiquement conçu pour les donn\'ees g\'en\'etique, construit \`a partir d'un mod\`ele de Markov \`a \'etats discrets  $\{0,1,2\}$. Ce noyau est particuli\`erement bien adapt\'e aux donn\'ees SNPs et a prouve son efficacit\'e pour capturer l'effet combin\'e des variants communs et rares, dans le cas non lin\'eaire.
+\medskip
+
+\noindent
+\textbf{2.4. Travaux ant\'erieurs et r\'esultats pr\'eliminaires}
+\smallskip
+
+\noindent
+Nous avons montr\'e r\'ecemment en utilisant les donn\'ees d'IMAGEN (imagerie et g\'en\'etique) qu'une part importante de la diversit\'e des ph\'enotypes neuroanatomiques est captur\'ee par des milliers de SNPs communs, chacun ayant un effet petit (Toro et al 2014). L'heritabilit\'e des ph\'enotype est importante (volume intracranien $\sim 50\%$ ou volume du cerveau $\sim 45\%$) ce qui nous a permis d'obtenir des r\'esultats statistiquement significatifs. Cependant, l'erreur standard est importante  ($\sim 20\%$), du fait d'un trop petit nombre d'individus. Les calculs de puissance montrent qu'une cohorte de 4000 sujets r\'eduirait l'erreur standard \`a $\sim 10\%$, tandis que 8000 sujets permettraient d'obtenir une erreur de $\sim 5\%$. Nous proposons d'\'etendre nos r\'esultats pr\'ec\'edant avec les donn\'ees du consortium ENIGMA, donnant acc\`es a 20000 sujets. Nous pourrions ainsi d\'etecter des effets de tr\`es petites tailles et des estim\'ees tr\`es pr\'ecises des effets plus grands. Grâce \`a notre exp\'erience sur la cohorte IMAGEN, nous avons le savoir faire et l'infrastructure pour r\'ealiser ce projet. Nous b\'en\'eficierons aussi des travaux d'ENIGMA dans le contexte de la participation d'IMAGEN \`a ENIGMA 1 (volume c\'er\'ebral, volume hippocampique, etc). Du cote m\'ethodologique, nous proposons une technique innovante avec l'utilisation des noyaux de  Wright-Fisher (Zhu et al., 2011) et nous avons d\'ej\`a les outils computationnels de base pour ce projet.
+\bigskip
+
+\noindent
+{\large \textbf{3. L'\'equipe projet.}}
+\medskip
+
+\noindent
+Notre \'equipe est compos\'ee de Lexin Li, Jean-Baptiste Poline, and Roberto Toro. Dr. Li est professeur associ\'e dans la division de Biostatistiques a UC Berkeley. Son expertise inclue les domaines de la neuroimagerie et le d\'eveloppement des m\'ethodes computationnelles pour les donn\'ees de grande dimension. Dr Poline est chercheur au "Henry H. Wheeler Jr.\ Brain Imaging Center" \`a UC Berkeley. Il a \'et\'e le responsable des aspects biostatistiques et bioinformatiques du projet IMAGEN et a collabor\'e avec ENIGMA dans plusieurs projets. Dr Toro est un chercheur du d\'epartement de neurosciences, laboratoire de g\'en\'etique humaine (T. Bourgeron) \`a l'institut Pasteur, Paris, France. Il est responsable des projets d'imagerie g\'en\'etique dans le laboratoire de g\'en\'etique humaine. Nous rassemblons donc l'expertise n\'ecessaire \`a la r\'ealisation du projet.  
+\bigskip
+
+
+
+\noindent
+{\large \textbf{4. Plan de travail.}}
+\medskip
+
+\noindent
+Nous pr\'evoyons deux r\'eunions de vivo, ainsi que des conf\'erences t\'el\'ephoniques chaque semaine. La premi\`ere r\'eunion aura lieu a Paris et nous mettrons en place les outils pour une collaboration efficace (compte github, r\'epertoires partag\'es, etc). La seconde r\'eunion aura lieu \`a Berkeley ou nous ferons un point complet du projet, travaillerons sur l'interpr\'etation des premiers r\'esultats obtenus sur les donn\'ees simul\'ees et r\'eelles, et sur le r\'eglage des mod\`eles.
+
+Du point de vue calendrier des taches, nous pr\'evoyons durant les mois 1-8 de (a) d\'evelopper un outils de simulation simple pour valider nos m\'ethodes et leurs impl\'ementations; (b) calculer les matrices de relation g\'en\'etiques a partir des donn\'ees IMAGEN et ENIGMA; (c) d\'evelopper les proc\'edures d'estimation adapt\'ees. Durant les mois 9-12, nous pr\'evoyons de: (a) tester les nouvelles m\'ethodes sur les matrices de relation g\'en\'etiques simul\'ees et exp\'erimentales; (b) comparer les r\'esultats avec l'approche standard GCTA; (c) communiquer, publier les r\'esultats et mettre nos codes a disposition. 
+\bigskip
+
+
+
+\noindent
+{\large \textbf{5. R\'ef\'erences}}
+\medskip
+
+\vspace{-0.1in}
+\begin{list}{[\arabic{pubcnt}]}{\usecounter{pubcnt}\setlength{\parsep}{0in}\setlength{\itemsep}{\adjitsepb}\setlength{\itemindent}{0in}}\item Gaugler, T., Klei, L., Sanders, S.J. et al. (2014). Most genetic risk for autism resides with common variation. \emph{Nature Genetics}, 46: 881-885.
+
+\item Liu, D., Lin, X. and Ghosh, D. (2007), Semiparametric regression of multidimensional genetic pathway data: least-squares kernel machines and linear mixed models. \emph{Biometrics}, 63, 1079-1088. 
+
+\item Schumann, G., Loth, E., Banaschewski, T. et al. (2010). The IMAGEN study: reinforcement-related behavior in normal brain function and psychopathology. \emph{Molecular Psychiatry},15, 1128-1139.
+
+\item Thompson, P.M., Stein, J.L., Medland, S.E., Hibar, D.P., Vasquez, A.A., Renteria, M.E., Toro, R., Jahanshad, N., Schumann, G., Franke, B., et al. (2014). The ENIGMA Consortium: large-scale collaborative analyses of neuroimaging and genetic data. \emph{Brain Imaging and Behavior},1-30.
+
+\item Toro, R., Poline, JB., Huguet, G. et al. (2014). Genomic architecture of human neuroanatomical diversity. \emph{Molecular Psychiatry}, Accepted, doi:10.1038/mp.2014.99.
+
+\item Yang, J., Benyamin, B., McEvoy, B.P. et al. (2010). Common SNPs explain a large proportion of heritability for human height. \emph{Nature genetics}, 42, 565-569.
+
+\item Zhu, H., Li, L., and Zhou, H. (2012). Nonlinear dimension reduction with Wright-Fisher kernel for genotype aggregation and association mapping. \emph{Bioinformatics}, 28, 375-381.
+\end{list}
+
+
+
+\end{document}

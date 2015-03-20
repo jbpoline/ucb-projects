@@ -1,0 +1,236 @@
+\documentclass[11pt]{article}
+\usepackage{enumerate,color,multirow}
+\usepackage{latexsym,amsbsy,amstext,amssymb,amsmath,bm}
+\usepackage{graphicx,booktabs}
+\usepackage{algorithmic,algorithm}
+\usepackage{hyperref}
+\usepackage{theorem}
+\usepackage{array,stmaryrd}
+\usepackage[compact]{titlesec}
+\usepackage{natbib}
+\usepackage{varioref}
+\usepackage[margin=0.85in]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{wrapfig}
+\usepackage{setspace}          
+\singlespacing
+
+\newtheorem{example}{\sc Example}
+\newtheorem{lemma}{\sc Lemma}
+\newtheorem{theorem}{\sc Theorem}
+\newtheorem{corollary}{\sc Corollary}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{definition}{\sc Definition}
+\newtheorem{remark}{\sc remark}
+\newtheorem{assumption}{\sc Assumption}
+\newtheorem{condition}{Condition}
+\newtheorem{proposition}{\sc Proposition}
+
+\newcommand{\E}{\mathbf{E}}
+\newcommand{\var}{\mathbf{var}}
+\newcommand{\cov}{\mathrm{cov}}
+\newcommand{\vect}{\mathrm{vec}}
+\newcommand{\tr}{\mathrm{trace}}
+\newcommand{\indep}{\;\, \rule[0em]{.03em}{.6em} \hspace{-.25em}
+\rule[0em]{.65em}{.03em} \hspace{-.25em}
+\rule[0em]{.03em}{.6em}\;\,}
+\newcommand{\real}[1]{\mathrm{I \! R} \mathit{^{#1}}}
+\newcommand{\trans}{^{\mbox{\tiny {\sf T}}}}
+\newcommand{\spn}{\mbox{span}}
+\newcommand{\spc}{{\mathcal S}}
+\newcommand{\diag}{\mathrm{diag}}
+
+\newcommand{\Abf}{{\bm A}}
+\newcommand{\Bbf}{{\bm B}}
+\newcommand{\Cbf}{{\bm C}}
+\newcommand{\Dbf}{{\bm D}}
+\newcommand{\Fbf}{{\bm F}}
+\newcommand{\Gbf}{{\bm G}}
+\newcommand{\Hbf}{{\bm H}}
+\newcommand{\Ibf}{{\bm I}}
+\newcommand{\Jbf}{{\bm J}}
+\newcommand{\Kbf}{{\bm K}}
+\newcommand{\Lbf}{{\bm L}}
+\newcommand{\Mbf}{{\bm M}}
+\newcommand{\Obf}{{\bm O}}
+\newcommand{\Pbf}{{\bm P}}
+\newcommand{\Qbf}{{\bm Q}}
+\newcommand{\Sbf}{{\bm S}}
+\newcommand{\Ubf}{{\bm U}}
+\newcommand{\Vbf}{{\bm V}}
+\newcommand{\Wbf}{{\bm W}}
+\newcommand{\Xbf}{{\bm X}}
+\newcommand{\Ybf}{{\bm Y}}
+\newcommand{\Zbf}{{\bm Z}}
+
+\newcommand{\abf}{{\bm a}}
+\newcommand{\bbf}{{\bm b}}
+\newcommand{\cbf}{{\bm c}}
+\newcommand{\ebf}{{\bm e}}
+\newcommand{\fbf}{{\bm f}}
+\newcommand{\gbf}{{\bm g}}
+\newcommand{\lbf}{{\bm l}}
+\newcommand{\qbf}{{\bm q}}
+\newcommand{\tbf}{{\bm t}}
+\newcommand{\ubf}{{\bm u}}
+\newcommand{\vbf}{{\bm v}}
+\newcommand{\wbf}{{\bm w}}
+\newcommand{\xbf}{{\bm x}}
+\newcommand{\ybf}{{\bm y}}
+\newcommand{\zbf}{{\bm z}}
+
+\newcommand{\zerobf}{{\mathbf 0}}
+\newcommand{\onebf}{{\mathbf 1}}
+
+\newcommand{\greekbold}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\alphabf}{\greekbold{\alpha}}
+\newcommand{\betabf}{\greekbold{\beta}}
+\newcommand{\deltabf}{\greekbold{\delta}}
+\newcommand{\etabf}{\greekbold{\eta}}
+\newcommand{\gammabf}{\greekbold{\gamma}}
+\newcommand{\mubf}{\greekbold{\mu}}
+\newcommand{\nubf}{\greekbold{\nu}}
+\newcommand{\phibf}{\greekbold{\phi}}
+\newcommand{\psibf}{\greekbold{\psi}}
+\newcommand{\taubf}{\greekbold{\tau}}
+\newcommand{\varepsilonbf}{\greekbold{\varepsilon}}
+\newcommand{\zetabf}{\greekbold{\zeta}}
+\newcommand{\thetabf}{\greekbold{\theta}}
+\newcommand{\lambdabf}{\greekbold{\lambda}}
+\newcommand{\Gammabf}{\greekbold{\Gamma}}
+\newcommand{\Thetabf}{\greekbold{\Theta}}
+\newcommand{\Sigmabf}{\greekbold{\Sigma}}
+\newcommand{\Lambdabf}{\greekbold{\Lambda}}
+\newcommand{\Omegabf}{\greekbold{\Omega}}
+\newcommand{\Pibf}{\greekbold{\Pi}}
+
+
+
+\begin{document}
+
+\begin{center}
+{\large \bf DESCRIPTION DU PROJET}
+\end{center}
+
+\noindent
+{\large \textbf{1. Buts et significance du projet.}}
+\medskip
+
+\noindent
+Il a été récemment montré qu'une proportion importante (50\%) du risque génétique du syndrome autistique est capturé par la variance génétique commune de nombreux effets de petites tailles. Ce résultat suggère que dans la plupart des cas, le phénotype autistique n'est pas le résultat d'un ou de quelque gènes, mais le fait de variants communs sur un grand nombre de gènes. Nous avons montré récemment que la variabilité dans la cohorte IMAGEN est aussi capturée par des variant fréquents (Toro et coll., 2014). Nous pourrions donc cartographier la corrélation génétique entre le risque d'avoir un phénotype autistique et le phénotype de neuroimagerie, ce qui permettrait d'aider a identifier les structures cérébrales dont les bases génétiques correspondent avec celles du risque de développer un syndrome autistique. Cette cartographie pourrait aussi permettre d'obtenir des informations biologiques pertinentes pour les maladies psychiatriques dont l'architecture génétique est massivement polygénique. Plus spécifiquement dans ce projet nos avons les buts suivants:
+
+\newcounter{pubcnt}
+\newlength{\adjitsepb}
+\setlength{\adjitsepb}{0.06in}
+
+\vspace{-0.075in}
+\begin{list}{[\arabic{pubcnt}]}{\usecounter{pubcnt}\setlength{\parsep}{0in}\setlength{\itemsep}{\adjitsepb}\setlength{\itemindent}{0in}}
+	\item Nous proposons d'estimer les corrélations genetiques entre le risque d'un trouble psychiatrique et le phénotype de neuroimagerie (anatomique) en utilisant des cohortes de grandes tailles (comme IMAGEN). 
+	\item Nous prévoyons de combiner la cohorte ENIGMA avec la cohorte IMAGEN dans notre analyse, ce qui devrait nous donner une taille d'échantillon d'environ 20000 sujets et assurer une puissance statistique importante pour détecter des effets de petites tailles. 
+	\item Nous proposons une nouvelle méthode statistique pour l'analyse des phénotypes complexes a travers l'ensemble du génome, en utilisant les méthodes modernes d'apprentissage statistique et de moindre carres à noyaux spécialement conçues pour des données génomiques. 
+\end{list}
+
+\noindent
+\textbf{Importance du projet:} Notre méthode fourni une approche systématique et puissante pour obtenir les informations pertinentes sur le système nerveux central, quand le risque de maladie psychiatrique n'est pas du à un seul ou un petit nombre de gène, mais est du fait d'un grand nombre de gènes distribués sur l'ensemble du génome ayant chacun un effet très petit. 
+\bigskip
+
+
+
+\noindent
+{\large \textbf{2. Méthodes.}}
+\medskip
+
+\noindent
+\textbf{2.1. Les consortiums IMAGEN et ENIGMA.}
+\smallskip
+
+\noindent
+Les données nécessaires pour ce projet existent deja dans les consortiums IMAGEN (Schumann et al., 2010) et ENIGMA (Thompson et al., 2014). Roberto Toro et JB Poline sont des membres de plein droits de ces consortiums et ont accès aux données. Le projet décrit à déjà été soumis et approuve par les deux consortiums, donnant accès a plus de 20000 sujets et la possibilité d'une très grande puissance statistique pour la détection de l'héritabilité et des corrélations génétiques. 
+
+\medskip
+
+
+\noindent
+\textbf{2.2. Analyse des traits complexes sur l'ensemble du génome}
+\smallskip
+
+\noindent
+Le concept a la base de l'analyse de ces traits complexes (cf GCTA) est un modèle a effets mixes (Yang et al., 2010):
+\begin{eqnarray} \label{eqn:lm}
+y_i = \betabf\trans \xbf_i + g_i + \varepsilon_i, \;\; i = 1, \ldots, n,
+\end{eqnarray}
+ou $y_i$ dénote le phénotype du $i$eme sujet, $\xbf_i$ est un vecteur de covariate avec des effets fixes du $i$eme sujet, incluant par exemple les effets de l'age ou du genre, $\betabf$ est le vecteur correspondant d'effets fixes, $g_i$ est l'effet génétique total du $i$eme individu, $\varepsilon$ est le terme d'erreur (distribution normale avec moyenne nulle et variance constante $\sigma^2_\varepsilon$), et $n$ est le nombre total de sujets. 
+Soit $\ybf = (y_1, \ldots, y_n)\trans$, and $\gbf = (g_1, \ldots, g_n)\trans$, la relation d'intérêt entre les covariances est la suivante $\var(\ybf) = \Abf \sigma^2_g + \Ibf \sigma^2_\varepsilon$,
+ou $\Abf$ est une matrice $n \times n$ représentant la relation génétique entre les individus, $\Ibf$ est une matrice identité $n \times n$, et $\gbf$ suit une loi normal de moyenne nulle et de covariance $\Abf \sigma^2_g$. La quantité  $\sigma^2_g$ capture la  variance expliquée par tous les SNPs et peut être estimée par maximum de vraisemblance restreinte (REML) à partir du modèle à effets mixes.
+\medskip
+
+
+\noindent
+\textbf{2.3. Moindres carres à noyau et noyau de Wright-Fisher}
+\smallskip
+
+\noindent
+A partir de \eqref{eqn:lm}, GCTA fait deux hypothèses. D'une part l'association entre le phénotype $y_i$ et l'effet génétique $g_i$ est supposé linéaire. D'autre part, les effets des SNPs sont combinés linéairement dans $g_i$. Biologiquement, aucune de ces hypothèses n'est exacte. L'association entre les phénotypes et les variants génétiques peut être complexe, vraisemblablement non linéaire. La combinaison des effets de chaque SNP peut elle aussi être complexe et non linéaire, par exemple avec des effets d'épistasis (interactions entre SNPs). 
+
+Pour répondre à ces limitations, nous proposons d'employer une méthode d'apprentissage statistique moderne, les moindres carrés a noyau, pour remplacer le modèle linéaire \eqref{eqn:lm},
+
+\begin{eqnarray} \label{eqn:nm}
+y_i = \betabf\trans \xbf_i + h(g_i) + \varepsilon_i, \;\; i = 1, \ldots, n,
+\end{eqnarray}
+
+ou la différence clés est qu'une fonction non connue apportant de la flexibilité $h$ est introduite pour capturer l'association entre $y_i$ and $g_i$. En imposant que $h$ soit dans un espace fonctionnel souple, l'espace de Hilbert à noyaux reproduisant, on peut obtenir une solution analytique pour $h(g_i)$, et les calculs sont rapides. De plus il existe une connexion directe entre le modèle  \eqref{eqn:nm} et le modèle à effet mixe (Liu et al., 2007), et l'on peut donc utiliser REML pour calculer la variance de $h(g_i)$. Nous considérons la moyenne de $h(g_i)$ a travers les sujets comme une mesure de la variance expliquée par les SNPs, qui joue le même rôle que $\sigma^2_g$ dans le modèle \eqref{eqn:lm}. L'estimation du modèle  \eqref{eqn:nm} requiert aussi la spécification d'une fonction noyau. Nous proposons d'utiliser le noyau de  Wright-Fisher (Zhu et al., 2011) spécifiquement conçu pour les données génétique, construit à partir d'un modèle de Markov à états discrets  $\{0,1,2\}$. Ce noyau est particulièrement bien adapté aux données SNPs et a prouve son efficacité pour capturer l'effet combiné des variants communs et rares, dans le cas non linéaire.
+\medskip
+
+\noindent
+\textbf{2.4. Travaux antérieurs et résultats préliminaires}
+\smallskip
+
+\noindent
+Nous avons montré récemment en utilisant les données d'IMAGEN (imagerie et génétique) qu'une part importante de la diversité des phénotypes neuroanatomiques est capturée par des milliers de SNPs communs, chacun ayant un effet petit (Toro et al 2014). L'heritabilité des phénotype est importante (volume intracranien $\sim 50\%$ ou volume du cerveau $\sim 45\%$) ce qui nous a permis d'obtenir des résultats statistiquement significatifs. Cependant, l'erreur standard est importante  ($\sim 20\%$), du fait d'un trop petit nombre d'individus. Les calculs de puissance montrent qu'une cohorte de 4000 sujets réduirait l'erreur standard à $\sim 10\%$, tandis que 8000 sujets permettraient d'obtenir une erreur de $\sim 5\%$. Nous proposons d'étendre nos résultats précédant avec les données du consortium ENIGMA, donnant accès a 20000 sujets. Nous pourrions ainsi détecter des effets de très petites tailles et des estimées très précises des effets plus grands. Grâce à notre expérience sur la cohorte IMAGEN, nous avons le savoir faire et l'infrastructure pour réaliser ce projet. Nous bénéficierons aussi des travaux d'ENIGMA dans le contexte de la participation d'IMAGEN à ENIGMA 1 (volume cérébral, volume hippocampique, etc). Du cote méthodologique, nous proposons une technique innovante avec l'utilisation des noyaux de  Wright-Fisher (Zhu et al., 2011) et nous avons déjà les outils computationnels de base pour ce projet.
+\bigskip
+
+\noindent
+{\large \textbf{3. L'équipe projet.}}
+\medskip
+
+\noindent
+Notre équipe est composée de Lexin Li, Jean-Baptiste Poline, and Roberto Toro. Dr. Li est professeur associé dans la division de Biostatistiques a UC Berkeley. Son expertise inclue les domaines de la neuroimagerie et le développement des méthodes computationnelles pour les données de grande dimension. Dr Poline est chercheur au "Henry H. Wheeler Jr.\ Brain Imaging Center" à UC Berkeley. Il a été le responsable des aspects biostatistiques et bioinformatiques du projet IMAGEN et a collaboré avec ENIGMA dans plusieurs projets. Dr Toro est un chercheur du département de neurosciences, laboratoire de génétique humaine (T. Bourgeron) à l'institut Pasteur, Paris, France. Il est responsable des projets d'imagerie génétique dans le laboratoire de génétique humaine. Nous rassemblons donc l'expertise nécessaire à la réalisation du projet.  
+\bigskip
+
+
+
+\noindent
+{\large \textbf{4. Plan de travail.}}
+\medskip
+
+\noindent
+Nous prévoyons deux réunions de vivo, ainsi que des conférences téléphoniques chaque semaine. La première réunion aura lieu a Paris et nous mettrons en place les outils pour une collaboration efficace (compte github, répertoires partagés, etc). La seconde réunion aura lieu à Berkeley ou nous ferons un point complet du projet, travaillerons sur l'interprétation des premiers résultats obtenus sur les données simulées et réelles, et sur le réglage des modèles.
+
+Du point de vue calendrier des taches, nous prévoyons durant les mois 1-8 de (a) développer un outils de simulation simple pour valider nos méthodes et leurs implémentations; (b) calculer les matrices de relation génétiques a partir des données IMAGEN et ENIGMA; (c) développer les procédures d'estimation adaptées. Durant les mois 9-12, nous prévoyons de: (a) tester les nouvelles méthodes sur les matrices de relation génétiques simulées et expérimentales; (b) comparer les résultats avec l'approche standard GCTA; (c) communiquer, publier les résultats et mettre nos codes a disposition. 
+\bigskip
+
+
+
+\noindent
+{\large \textbf{5. Références}}
+\medskip
+
+\vspace{-0.1in}
+\begin{list}{[\arabic{pubcnt}]}{\usecounter{pubcnt}\setlength{\parsep}{0in}\setlength{\itemsep}{\adjitsepb}\setlength{\itemindent}{0in}}\item Gaugler, T., Klei, L., Sanders, S.J. et al. (2014). Most genetic risk for autism resides with common variation. \emph{Nature Genetics}, 46: 881-885.
+
+\item Liu, D., Lin, X. and Ghosh, D. (2007), Semiparametric regression of multidimensional genetic pathway data: least-squares kernel machines and linear mixed models. \emph{Biometrics}, 63, 1079-1088. 
+
+\item Schumann, G., Loth, E., Banaschewski, T. et al. (2010). The IMAGEN study: reinforcement-related behavior in normal brain function and psychopathology. \emph{Molecular Psychiatry},15, 1128-1139.
+
+\item Thompson, P.M., Stein, J.L., Medland, S.E., Hibar, D.P., Vasquez, A.A., Renteria, M.E., Toro, R., Jahanshad, N., Schumann, G., Franke, B., et al. (2014). The ENIGMA Consortium: large-scale collaborative analyses of neuroimaging and genetic data. \emph{Brain Imaging and Behavior},1-30.
+
+\item Toro, R., Poline, JB., Huguet, G. et al. (2014). Genomic architecture of human neuroanatomical diversity. \emph{Molecular Psychiatry}, Accepted, doi:10.1038/mp.2014.99.
+
+\item Yang, J., Benyamin, B., McEvoy, B.P. et al. (2010). Common SNPs explain a large proportion of heritability for human height. \emph{Nature genetics}, 42, 565-569.
+
+\item Zhu, H., Li, L., and Zhou, H. (2012). Nonlinear dimension reduction with Wright-Fisher kernel for genotype aggregation and association mapping. \emph{Bioinformatics}, 28, 375-381.
+\end{list}
+
+
+
+\end{document}
