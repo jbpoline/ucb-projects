@@ -1,0 +1,147 @@
+\documentclass[11pt]{article}
+
+\usepackage{enumerate, color, multirow}
+\usepackage{amsbsy, amstext, amssymb, amsthm, amsmath,bm}
+\usepackage{graphicx,booktabs,natbib}
+\usepackage{algorithmic,algorithm}
+\usepackage{geometry}
+\usepackage{array}
+
+\setlength{\topmargin}{-0.3 in}
+\setlength{\oddsidemargin}{0.2in}
+\setlength{\textwidth}{6.2in}
+\setlength{\textheight}{8.2in}
+\renewcommand{\baselinestretch}{1.1}
+\RequirePackage[displaymath]{lineno}
+
+\newtheorem{proposition}{{\bf Proposition}}
+\newtheorem{lemma}{{\bf Lemma}}
+\newtheorem{corollary}{{\bf Corollary}}
+\newtheorem{assumption}{{\bf Assumption}}
+\newtheorem{definition}{{\bf Definition}}
+\newtheorem{theorem}{{\bf Theorem}}
+\newtheorem{example}{{\bf Example}}
+\newtheorem{remark}{{\bf Remark}}
+
+\newcommand{\E}{E}
+\newcommand{\var}{\mathrm{var}}
+\newcommand{\cov}{\mathrm{cov}}
+\newcommand{\vect}{\mathrm{vec}}
+\newcommand{\tr}{\mathrm{trace}}
+\newcommand{\indep}{\;\, \rule[0em]{.03em}{.6em} \hspace{-.25em}
+\rule[0em]{.65em}{.03em} \hspace{-.25em}
+\rule[0em]{.03em}{.6em}\;\,}
+\newcommand{\real}[1]{\mathrm{I \! R} \mathit{^{#1}}}
+\newcommand{\trans}{^{\mbox{\tiny {\sf T}}}}
+\newcommand{\spn}{\mbox{span}}
+\newcommand{\spc}{{\mathcal S}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\cs}{\spc_{Y|\Xbf}}
+
+\newcommand{\Abf}{{\bm A}}
+\newcommand{\Bbf}{{\bm B}}
+\newcommand{\Dbf}{{\bm D}}
+\newcommand{\Fbf}{{\bm F}}
+\newcommand{\Hbf}{{\bm H}}
+\newcommand{\Ibf}{{\bm I}}
+\newcommand{\Jbf}{{\bm J}}
+\newcommand{\Kbf}{{\bm K}}
+\newcommand{\Mbf}{{\bm M}}
+\newcommand{\Obf}{{\bm O}}
+\newcommand{\Ubf}{{\bm U}}
+\newcommand{\Vbf}{{\bm V}}
+\newcommand{\Wbf}{{\bm W}}
+\newcommand{\Xbf}{{\bm X}}
+\newcommand{\Ybf}{{\bm Y}}
+\newcommand{\Zbf}{{\bm Z}}
+
+\newcommand{\abf}{{\bm a}}
+\newcommand{\bbf}{{\bm b}}
+\newcommand{\ebf}{{\bm e}}
+\newcommand{\fbf}{{\bm f}}
+\newcommand{\lbf}{{\bm l}}
+\newcommand{\ubf}{{\bm u}}
+\newcommand{\vbf}{{\bm v}}
+\newcommand{\wbf}{{\bm w}}
+\newcommand{\xbf}{{\bm x}}
+\newcommand{\ybf}{{\bm y}}
+\newcommand{\zbf}{{\bm z}}
+
+\newcommand{\zerobf}{{\mathbf 0}}
+\newcommand{\onebf}{{\mathbf 1}}
+
+\newcommand{\greekbold}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\alphabf}{\greekbold{\alpha}}
+\newcommand{\betabf}{\greekbold{\beta}}
+\newcommand{\deltabf}{\greekbold{\delta}}
+\newcommand{\etabf}{\greekbold{\eta}}
+\newcommand{\gammabf}{\greekbold{\gamma}}
+\newcommand{\mubf}{\greekbold{\mu}}
+\newcommand{\nubf}{\greekbold{\nu}}
+\newcommand{\phibf}{\greekbold{\phi}}
+\newcommand{\psibf}{\greekbold{\psi}}
+\newcommand{\taubf}{\greekbold{\tau}}
+\newcommand{\zetabf}{\greekbold{\zeta}}
+\newcommand{\thetabf}{\greekbold{\theta}}
+\newcommand{\lambdabf}{\greekbold{\lambda}}
+\newcommand{\Gammabf}{\greekbold{\Gamma}}
+\newcommand{\Thetabf}{\greekbold{\Theta}}
+\newcommand{\Sigmabf}{\greekbold{\Sigma}}
+\newcommand{\Lambdabf}{\greekbold{\Lambda}}
+\newcommand{\Omegabf}{\greekbold{\Omega}}
+\newcommand{\Pibf}{\greekbold{\Pi}}
+\newcommand{\Psibf}{\greekbold{\Psi}}
+
+\newcommand{\Xb}{\mathbb{X}}
+\newcommand{\Xf}{\mathfrak{X}}
+
+
+
+
+
+\title{Note on the project}
+\author{Lexin Li}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{enumerate}
+\item Data:
+\begin{enumerate}[(1)]
+\item fMRI: subject $1, \ldots, n$; for each subject, $r$ ROIs from some pre-defined atlas; for each ROI, measurement is a time series with length $t$.
+\item Time series of individual voxels within the same ROI are usually averaged; time series from different frequency bands of fMRI are usually averaged. 
+\item Let $\Xbf_1, \ldots, \Xbf_n \in \real{r \times t}$ denote the observed time series matrix (with $r$ rows and $t$ columns).
+\item PET: subject $1, \ldots, n$; for each subject, $m$ ROIs from the same atlas; for each ROI, a scalar measure of glucose metabolism from FDG-PET, or $\beta$-amyloid from PIB-PET.
+\end{enumerate}
+
+\item Scientific question:
+\begin{enumerate}[(1)]
+\item Verify if those brain regions with high connectivity also have low glucose level. 
+\item Assuming the above hypothesis is true, find brain regions where such a negative correlation exists. 
+\end{enumerate}
+
+\item Method:
+\begin{enumerate}[(1)]
+\item Let $\Sigmabf_1, \ldots, \Sigmabf_n \in \real{r \times r}$ denote the covariance matrix for each subject; Pearson correlation coefficient, synchronization likelihood, etc, may be used to compute this covariance matrix. 
+\item Let $\Omegabf_1, \ldots, \Omegabf_n \in \real{r \times r}$ denote the precision matrix for each subject; can use existing package taking $\Sigmabf_i$ as the input, and $\Omegabf_i$ as the output.  
+\item Threshold $\Sigmabf_i$; or threshold $\Omegabf_i$. Note that $\Omegabf_i$, depending on the method, may already be sparse, so thresholding may not be necessary.
+\item Extract network measure from $\Sigmabf_i$, or alternatively from $\Omegabf_i$, for each node, e.g., node degree, participation coefficient, clustering coefficient, etc.
+\item Hypothesis testing: for each subject, there is a vector of connectivity measure, and a vector of glucose, each of length $r$; compute the correlation coefficient $\rho_i$ between the two vectors, $i=1,\ldots,n$; test the hypothesis that $\rho = 0$ vs $\rho < 0$ using a one-sample test given $\rho_1,\ldots,\rho_n$. 
+\item Node (brain region) detection: for each node, compute the correlation coefficient $\rho_{ij}$ between the scalar of connectivity measure and the scalar of glucose ($\beta$-amyloid), $i=1,\ldots,n, j=1,\ldots,r$; for each node, test the hypotheses $\rho_j = 0$ vs $\rho_j < 0$; correct for multiple testing, where $r \sim 10^2$; select all those nodes (brain regions) with the corrected $p$-value less than a thresholding value (say, 0.05 or 0.01). 
+\end{enumerate}
+
+\item Comment:
+\begin{enumerate}[(1)]
+\item The choice of atlas is important. 
+\item Extracting network measure, to my understanding, can be based on either the covariance matrix, or the precision matrix. If it's based on the covariance matrix, then we may consider if there is a way to estimate the covariance matrix for each subject better than the usual sample covariance estimator. In that case, the number of regions $r$ acts like the dimensionality, while the length of time series $t$ acts like the ``sample size". We may use some regularized covariance estimator, e.g., the one developed by Prof. Peter Bickel of Berkeley, or some other estimators. On the other hand, if we decide to use the precision matrix, then it seems to me ok to simply use the usual covariance matrix estimator, then feed it into a regularized precision matrix estimator. Basically, my point is, regularization can be applied to estimating both $\Sigmabf_i$ and $\Omegabf_i$. Which regularization to choose depends on which matrix we choose to use for network measure extraction. 
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+
+\end{document}
